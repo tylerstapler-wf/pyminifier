@@ -31,6 +31,13 @@ def main():
         metavar="<file path>"
     )
     parser.add_option(
+        '-s', "--seed",
+        dest="seed",
+        default=None,
+        help="The random seed to use",
+        metavar="<seed number>"
+    )
+    parser.add_option(
         "-d", "--destdir",
         dest="destdir",
         default="./minified",

@@ -66,7 +66,7 @@ something is broken.
 """
 
 # Import built-in modules
-import os, sys, re, io
+import os, random, sys, re, io
 from optparse import OptionParser
 from collections import Iterable
 
@@ -178,6 +178,8 @@ def pyminify(options, files):
         # Make our .pyz:
         compression.zip_pack(files, options)
         return None # Make sure we don't do anything else
+    if options.seed:
+        random.seed(a=int(options.seed))
     # Read in our prepend text (if any)
     prepend = None
     if options.prepend:
