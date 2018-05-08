@@ -5,13 +5,16 @@ __doc__ = """\
 A collection of functions for obfuscating code.
 """
 
-import os, sys, tokenize, keyword, sys, unicodedata
-from random import shuffle, choice
+import keyword
+import os
+import sys
+import tokenize
+import unicodedata
 from itertools import permutations
+from random import choice, shuffle
 
 # Import our own modules
-from . import analyze
-from . import token_utils
+from . import analyze, token_utils
 
 if not isinstance(sys.version_info, tuple):
     if sys.version_info.major == 3:

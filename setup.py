@@ -1,7 +1,9 @@
 import sys
-import pyminifier
-from setuptools import setup
 from distutils.command.install import INSTALL_SCHEMES
+
+from setuptools import setup
+
+import pyminifier
 
 for scheme in INSTALL_SCHEMES.values():
     scheme['data'] = scheme['purelib']

@@ -4,8 +4,13 @@ __doc__ = """\
 A module of useful functions for analyzing Python code.
 """
 
+import keyword
 # Import builtins
-import os, sys, re, tokenize, keyword
+import os
+import re
+import sys
+import tokenize
+
 try:
     import cStringIO as io
 except ImportError: # Ahh, Python 3

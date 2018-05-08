@@ -6,6 +6,7 @@ module.
 """
 
 import tokenize
+
 try:
     import cStringIO as io
 except ImportError: # We're using Python 3

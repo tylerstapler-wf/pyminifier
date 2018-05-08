@@ -1,8 +1,7 @@
-from optparse import OptionParser
 import sys
+from optparse import OptionParser
 
-from . import pyminify
-from . import __version__
+from . import __version__, pyminify
 
 py3 = False
 lzma = False

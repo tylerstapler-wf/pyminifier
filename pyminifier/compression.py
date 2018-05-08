@@ -38,10 +38,13 @@ files.  To pack a number of files at once using this method use the
 """
 
 # Import standard library modules
-import os, sys, tempfile, shutil
+import os
+import shutil
+import sys
+import tempfile
 
 # Import our own supporting modules
-from . import analyze, token_utils, minification, obfuscate
+from . import analyze, minification, obfuscate, token_utils
 
 py3 = False
 if not isinstance(sys.version_info, tuple):

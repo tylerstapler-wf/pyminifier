@@ -4,15 +4,19 @@ __doc__ = """\
 Module for minification functions.
 """
 
+import keyword
 # Import built-in modules
-import re, tokenize, keyword
+import re
+import tokenize
+
+# Import our own modules
+from . import analyze, token_utils
+
 try:
     import cStringIO as io
 except ImportError: # We're using Python 3
     import io
 
-# Import our own modules
-from . import analyze, token_utils
 
 # Compile our regular expressions for speed
 multiline_quoted_string = re.compile(r'(\'\'\'|\"\"\")')
